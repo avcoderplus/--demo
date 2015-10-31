@@ -1,0 +1,23 @@
+//
+//  PrefixHeader.pch
+//  轮播图demo
+//
+//  Created by dllo on 15/10/30.
+//  Copyright © 2015年 刘志强. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define WSCALE [[UIScreen mainScreen] bounds].size.width/375
+#define HSCALE [[UIScreen mainScreen] bounds].size.height/667
+
+#define NSLog(FORMAT, ...) fprintf(stderr,"[%s:%d行] %s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
+
+#import "UIButton+WebCache.h"
+
+#endif /* PrefixHeader_pch */
